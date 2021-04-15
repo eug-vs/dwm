@@ -86,6 +86,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_h,      tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,      tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_r,      resizemouse,    {0} },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },

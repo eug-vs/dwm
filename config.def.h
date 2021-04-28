@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 28;        /* gaps between windows */
+static const unsigned int gappx     = 48;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
@@ -14,27 +14,25 @@ static const int horizpadbar        = 6;        /* horizontal padding for status
 static const int vertpadbar         = 16;        /* vertical padding for statusbar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "fira code nerd font:bold:pixelsize=12:antialias=true:autohint=true" };
-static const char col_gray1[]       = "#1d2021";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_background[]  = "#1d2021";
+static const char col_foreground[]  = "#ebdbb2";
 static const char col_yellow[]      = "#d79921";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_yellow,  col_yellow  },
+	[SchemeNorm] = { col_foreground, col_background, col_background },
+	[SchemeSel]  = { col_foreground, col_yellow,  col_yellow  },
 
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeStatus]  = { col_foreground, col_background,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 
-	[SchemeTagsSel]  = { col_gray1, col_yellow,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_background, col_yellow,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]  = { col_foreground, col_background,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 
-  [SchemeInfoSel]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]  = { col_foreground, col_background,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]  = { col_foreground, col_background,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
-static const char *tags[] = { "1: ", "2: ", "3: ", "4: ", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1: ", "2: ", "3: ", "4: ", "5: ", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,13 +42,13 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	// TODO: figure out firefox { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "St",       NULL,       NULL,       0,            0,           1,         0,        -1 },
-	{ "firefox",  NULL,       NULL,       1,            0,           0,         1,        -1 },
+	{ "brave-browser",   NULL, NULL,      1,            0,           0,         1,        -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        -1 },
 	{ "Slack",    NULL,       NULL,       1 << 1,       0,           0,         1,        -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.70; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 

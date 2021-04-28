@@ -13,7 +13,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 16;        /* vertical padding for statusbar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "fira code nerd font:bold:pixelsize=12:antialias=true:autohint=true" };
+static const char *fonts[]          = { "fira code nerd font:pixelsize=12:antialias=true:autohint=true" };
 static const char col_background[]  = "#1d2021";
 static const char col_foreground[]  = "#ebdbb2";
 static const char col_yellow[]      = "#d79921";

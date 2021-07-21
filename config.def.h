@@ -19,7 +19,7 @@ static const char col_yellow[]      = "#d79921";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_foreground, col_background, col_background },
-	[SchemeSel]  = { col_foreground, col_yellow,  col_yellow  },
+	[SchemeSel]  = { col_foreground, col_yellow,  col_yellow },
 
 	[SchemeStatus]  = { col_foreground, col_background,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 
@@ -31,7 +31,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1: ", "2: ", "3: ", "4: ", "5: ", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -41,9 +41,9 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	// TODO: figure out firefox { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "St",       NULL,       NULL,       0,            0,           1,         0,        -1 },
-	{ "brave-browser",   NULL, NULL,      1,            0,           0,         1,        -1 },
-	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        -1 },
-	{ "Slack",    NULL,       NULL,       1 << 1,       0,           0,         1,        -1 },
+	{ "Brave-browser",   NULL, NULL,      1,            0,           0,         1,        1 },
+	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        1 },
+	{ "Slack",    NULL,       NULL,       1 << 1,       0,           0,         1,        1 },
 };
 
 /* layout(s) */

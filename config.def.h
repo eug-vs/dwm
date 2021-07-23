@@ -15,15 +15,15 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "fira code nerd font:pixelsize=12:antialias=true:autohint=true" };
 static const char col_background[]  = "#1d2021";
 static const char col_foreground[]  = "#ebdbb2";
-static const char col_yellow[]      = "#d79921";
+static const char col_primary[]      = "#ebdbb2";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_foreground, col_background, col_background },
-	[SchemeSel]  = { col_foreground, col_yellow,  col_yellow },
+	[SchemeSel]  = { col_foreground, col_primary,  col_primary },
 
 	[SchemeStatus]  = { col_foreground, col_background,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 
-	[SchemeTagsSel]  = { col_background, col_yellow,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_background, col_primary,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm]  = { col_foreground, col_background,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 
   [SchemeInfoSel]  = { col_foreground, col_background,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}

@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	// TODO: figure out firefox { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "St",       NULL,       NULL,       0,            0,           1,         0,        -1 },
 	{ "Brave-browser",   NULL, NULL,      1,            0,           0,         1,        1 },
-	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        1 },
+	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        0 },
 	{ "Slack",    NULL,       NULL,       1 << 1,       0,           0,         1,        1 },
 };
 

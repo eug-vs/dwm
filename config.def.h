@@ -9,8 +9,8 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 16;        /* vertical padding for statusbar */
+static const int horizpadbar        = 4;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "fira code nerd font:pixelsize=12:antialias=true:autohint=true" };
 static const char col_background[]  = "#1d2021";
@@ -18,7 +18,7 @@ static const char col_foreground[]  = "#ebdbb2";
 static const char col_primary[]      = "#ebdbb2";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_foreground, col_background, col_background },
+	[SchemeNorm] = { col_foreground, col_background, "#000000" },
 	[SchemeSel]  = { col_foreground, col_primary,  col_primary },
 
 	[SchemeStatus]  = { col_foreground, col_background,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	// TODO: figure out firefox { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "St",       NULL,       NULL,       0,            0,           1,         0,        -1 },
 	{ "Brave-browser",   NULL, NULL,      1,            0,           0,         1,        1 },
+	{ "Chromium-browser",   NULL, NULL,      1,            0,           0,         1,        1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 1,       0,           0,         1,        0 },
 	{ "Slack",    NULL,       NULL,       1 << 1,       0,           0,         1,        1 },
 };

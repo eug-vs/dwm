@@ -13,11 +13,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "fira code nerd font:pixelsize=12:antialias=true:autohint=true" };
 static const char col_background[]  = "#1d2021";
 static const char col_foreground[]  = "#ebdbb2";
-static const char col_primary[]      = "#689d6a";
+static const char col_primary[]      = "#928374";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_foreground, col_background, "#000000" },
-	[SchemeSel]  = { col_foreground, col_primary,  col_primary  },
+	[SchemeSel]  = { col_foreground, col_primary,  "#000000"  },
 	[SchemeStatus]  = { col_foreground, col_background,  "#000000"  },
 };
 
